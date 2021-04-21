@@ -9,6 +9,12 @@ describe('pruebas en 02-template-string', () => {
     const saludo = getSaludo( nombre );
 
     expect( saludo ).toBe( `Hola ${nombre}`);
-    
+  })
+
+  test('getSaludo debe de retorar Hola Alba si no hay argumento nombre', () => {
+ 
+    const saludo = getSaludo();
+
+    expect( saludo ).toBe( 'Hola Alba');
   })
 })
