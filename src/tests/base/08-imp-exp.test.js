@@ -15,4 +15,14 @@ describe('pruebas en funciones de heroes', () => {
 
   });
 
+  test('debe de retornar un undefined si heroe no existe', () => {
+
+    const id = 10;
+
+    const heroe = getHeroeById(id);
+
+    expect( heroe ).toBe( undefined );
+
+  });
+
 })
