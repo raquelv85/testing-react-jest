@@ -37,4 +37,14 @@ describe('pruebas en funciones de heroes', () => {
 
   });
 
+  test('debe de retornar un array con los heroes de Marvel', () => {
+
+    const owner = 'Marvel';
+
+    const heroes = getHeroesByOwner(owner);
+
+    expect( heroes.length ).toBe( 2 );
+
+  });
+
 })
