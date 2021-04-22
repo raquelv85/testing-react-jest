@@ -1,4 +1,4 @@
-import { getHeroeById } from '../../base/08-imp-exp';
+import { getHeroeById, getHeroesByOwner } from '../../base/08-imp-exp';
 import heroes from '../../data/heroes';
 
 describe('pruebas en funciones de heroes', () => {
@@ -22,6 +22,18 @@ describe('pruebas en funciones de heroes', () => {
     const heroe = getHeroeById(id);
 
     expect( heroe ).toBe( undefined );
+
+  });
+
+  test('debe de retornar un array con los heroes de DC', () => {
+
+    const owner = 'DC';
+
+    const heroes = getHeroesByOwner(owner);
+
+    const heroesData = heroes.filter( h => h.owner === owner);
+
+    expect( heroes ).toEqual( heroesData );
 
   });
 
