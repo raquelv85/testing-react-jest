@@ -15,5 +15,16 @@ describe('pruebas con promesas', () => {
       })
 
   });
+
+  test('debe retornar error si heroe no existe', ( done ) => {
+    const id = 10;
+
+    getHeroeByIdAsync( id )
+      .catch( error => {
+        expect( error ).toBe( 'No se pudo encontrar el héroe' );
+        done();
+      })
+
+  });
   
 })
