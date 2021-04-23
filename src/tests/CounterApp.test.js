@@ -4,8 +4,10 @@ import CounterApp from '../CounterApp';
 
 describe('Pruebas en <CounterApp />', () => {
 
+  const wrapper = shallow( <CounterApp /> );
+
   test('debe de mostrar <CounterApp /> correctamente', () => {
-    const wrapper = shallow( <CounterApp /> );
+    
     expect( wrapper ).toMatchSnapshot();
 
   });
@@ -15,6 +17,15 @@ describe('Pruebas en <CounterApp />', () => {
     const counterText = wrapper.find('h2').text().trim();
     
     expect( counterText ).toBe('100');
+  })
+
+  test('debe de incrementar con el botón +1', () => {
+   wrapper.find('button').at(0).simulate('click');
+
+   const counterText = wrapper.find('h2').text().trim();
+
+   expect( counterText ).toBe('11')
+    
   })
 
 })
