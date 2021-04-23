@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <ComponentTest/> debe de mostrar <ComponentTest/> correctamente 1`] = `
+<Fragment>
+  <h1 />
+  <p>
+    Soy un subtitulo
+  </p>
+</Fragment>
+`;
